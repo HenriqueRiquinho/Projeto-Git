@@ -1,0 +1,33 @@
+FROM node:14
+// Defiindo a imagem base como o Node
+
+WORKDIR 
+
+//Configura o diretório de trabalho
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+// Executa o comando 'npm install' dentro do terminal, instalando todas as dependências 
+
+
+COPY . .
+
+COPY . . // Copia todos os arquivos do diretório 
+
+
+EXPOSE 5000
+
+EXPOSE 5000 // da nome uma porta 5000 como a porta que o usada para xpoor aplicação
+
+
+
+
+
+
+//Define o comando padrão que será executado
+CMD ["node", "server.js"]
+
